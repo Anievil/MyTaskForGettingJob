@@ -1,0 +1,58 @@
+@import '../HeaderStyle.module.scss';
+
+.loginCont{
+    @extend %for-flex;
+    width: 400px;
+    height: 250px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    z-index: 2;
+    margin: auto;
+    background-color: gray;
+    flex-direction: column;
+    border-radius: 15px;
+    transition: all .5s ease;
+    h2{
+        margin: -10px 0 20px;
+        text-align: center;
+    }
+    input{
+        border: none;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 5px;
+    }
+    input:active, :hover, :focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.close{
+    height: 30px;
+    width: 30px;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    position: absolute;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.displayNone{
+    opacity: 0;
+    visibility: hidden;
+}
+

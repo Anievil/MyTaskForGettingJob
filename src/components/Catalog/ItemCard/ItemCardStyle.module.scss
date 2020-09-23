@@ -1,0 +1,107 @@
+@import "../../Header/HeaderStyle.module.scss";
+
+.card{
+    @extend %for-flex;
+    flex-direction: column;
+    background-color: darkgrey;
+    width: 315px;
+    height: 370px;
+    margin: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.itemPic{
+    height: 50%;
+}
+
+.review{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;    
+    transition: all 0.5s ease;
+}
+
+.reviewCont{
+    position: absolute;
+    border-radius: 20px;
+    margin: auto;
+    min-width: 315px;
+    height: 370px;
+    background-color: #EEEEEE;
+    overflow-y: scroll;
+    padding: 20px;
+    margin-top: 20px;
+    transition: all .5s ease;
+    h2{
+        margin: 0;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        li{
+            list-style: none;  
+            border-radius: 3px;
+            margin-top: 20px; 
+            min-height: 100px;
+            background-color: #DDDDDD;
+            box-sizing: border-box;
+            border: 1px solid grey;
+            padding: 15px;
+            p{
+                margin: 0;
+            }
+            p:first-child{
+                color: #FD6600;
+            }
+        }
+    }
+}
+
+.displayNone{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.close{
+    height: 30px;
+    width: 30px;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    position: absolute;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.commentForm{
+    @extend %for-flex;
+    flex-direction: column;
+    input{
+        margin-top: 5px; 
+    }
+    input:active, :hover, :focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+}
+
+.newComment{
+    width: 177px;
+    min-height: 70px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.grey{
+    background-color: darkgray;
+}
+
+.darkGrey{
+    background-color: rgb(104, 102, 102);
+}

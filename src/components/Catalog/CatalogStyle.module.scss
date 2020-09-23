@@ -1,0 +1,6 @@
+@import "../Header/HeaderStyle.module.scss";
+
+.catalogList{
+    @extend %for-flex;
+    flex-wrap: wrap;
+}
